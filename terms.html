@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Terms of Service · Xyris Nature Script</title>
+  <meta name="description" content="Terms of service for Xyris Nature Script — guidelines for using our gardening journal and community.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23355e3b'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f6f2eb;
+      color: #1e2b1f;
+      font-family: 'Figtree', 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.7;
+      padding: 0 1.5rem;
+    }
+
+    .site-wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      background: #fcfaf7;
+      box-shadow: 0 0 40px rgba(0,0,0,0.02);
+      padding: 0 2rem 3rem;
+      border-radius: 0 0 48px 48px;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Merriweather', Georgia, serif;
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      color: #1d3a1e;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 2rem;
+      margin: 2.2rem 0 1rem;
+      border-left: 6px solid #b8b08b;
+      padding-left: 1.2rem;
+    }
+    h3 {
+      font-size: 1.4rem;
+      margin: 1.8rem 0 0.6rem;
+      color: #2f4d30;
+    }
+    p, li, blockquote {
+      font-size: 1.125rem;
+      color: #232f23;
+      max-width: 75ch;
+    }
+
+    a {
+      color: #3f6b3a;
+      text-decoration: none;
+      border-bottom: 1px dotted #b8b08b;
+      transition: border 0.2s;
+    }
+    a:hover {
+      border-bottom: 2px solid #3f6b3a;
+    }
+
+    ul, ol {
+      padding-left: 1.8rem;
+      max-width: 75ch;
+    }
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 0 1.5rem;
+      border-bottom: 2px solid #e5dfd4;
+      margin-bottom: 2rem;
+    }
+    .brand {
+      font-family: 'Merriweather', serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #2d4d2a;
+      background: #ede8dd;
+      padding: 0.1rem 1.2rem 0.2rem;
+      border-radius: 60px;
+      display: inline-block;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    }
+    .brand small {
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: #5b7157;
+      margin-left: 0.3rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      font-weight: 500;
+      font-size: 1.05rem;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      border-bottom: none;
+      color: #2b4028;
+      padding: 0.2rem 0;
+    }
+    .nav-links a:hover {
+      border-bottom: 3px solid #9dad85;
+    }
+    .nav-links li {
+      list-style: none;
+    }
+
+    .terms-hero {
+      padding: 1rem 0 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .terms-hero h1 {
+      font-size: 3rem;
+      line-height: 1.1;
+    }
+    .terms-hero .sub {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #3a553b;
+      border-left: 6px solid #b8b08b;
+      padding-left: 1rem;
+      margin: 0.3rem 0 0.8rem;
+    }
+    .last-updated {
+      font-size: 0.95rem;
+      color: #5b7157;
+      margin-top: 0.4rem;
+    }
+
+    .terms-section {
+      background: #f9f6ef;
+      border-radius: 32px 12px 32px 12px;
+      padding: 1.8rem 2.2rem;
+      margin: 1.8rem 0;
+      border: 1px solid #ece6da;
+    }
+    .terms-section h2 {
+      border-left: none;
+      padding-left: 0;
+      margin-top: 0.2rem;
+    }
+    .terms-section h3 {
+      margin-top: 1.2rem;
+    }
+
+    .highlight-box {
+      background: #ede8dd;
+      border-radius: 24px 8px 24px 8px;
+      padding: 1.5rem 2rem;
+      margin: 1.5rem 0;
+    }
+
+    .newsletter {
+      background: #dce5d3;
+      border-radius: 60px 12px 60px 12px;
+      padding: 2.5rem 3rem;
+      margin: 3rem 0;
+      text-align: center;
+    }
+    .newsletter h2 {
+      border-left: none;
+      padding-left: 0;
+      margin-top: 0;
+    }
+    .newsletter input {
+      border: 1px solid #b8b08b;
+      border-radius: 80px;
+      padding: 0.9rem 1.8rem;
+      font-size: 1rem;
+      background: #fcfaf7;
+      width: 280px;
+      max-width: 80%;
+      margin-right: 0.5rem;
+    }
+    .newsletter button {
+      background: #2d4d2a;
+      border: none;
+      color: white;
+      font-weight: 600;
+      padding: 0.9rem 2.2rem;
+      border-radius: 80px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .newsletter button:hover {
+      background: #1b3319;
+    }
+
+    footer {
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 2px solid #e5dfd4;
+      font-size: 0.95rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      color: #4b5f47;
+    }
+
+    @media (max-width: 700px) {
+      .site-wrap { padding: 0 1rem 2rem; }
+      .header { flex-direction: column; align-items: start; gap: 0.8rem; }
+      .nav-links { gap: 1rem; }
+      .terms-hero h1 { font-size: 2.2rem; }
+      .terms-section { padding: 1.2rem 1.2rem; }
+      .newsletter { padding: 1.8rem 1.2rem; }
+      footer { flex-direction: column; gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="site-wrap">
+
+  <!-- header -->
+  <header class="header">
+    <div class="brand">Xyris<span style="font-weight:300;">·</span>Nature <small>script</small></div>
+    <div class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="terms.html" style="border-bottom:3px solid #9dad85;">Terms Of Privacy</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="cookies.html">Cookies Policy</a></li>
+    </div>
+  </header>
+
+  <!-- terms hero -->
+  <section class="terms-hero">
+    <h1>Terms of Service</h1>
+    <div class="sub">Growing together, with clarity and respect</div>
+    <p class="last-updated">📅 Last updated: 26 June 2026</p>
+    <p style="margin-top:0.8rem; font-size:1.15rem;">Welcome to Xyris Nature Script. By using our website, you agree to the following terms — designed to keep our community thoughtful, respectful, and rooted in shared values.</p>
+  </section>
+
+  <!-- main terms content -->
+  <div class="terms-section">
+    <h2>1. Acceptance of terms</h2>
+    <p>By accessing or using Xyris Nature Script (the "Site"), you agree to be bound by these Terms of Service. If you do not agree, please do not use our site. We reserve the right to update these terms at any time; changes will be posted here.</p>
+  </div>
+
+  <div class="terms-section">
+    <h2>2. Content & intellectual property</h2>
+    <p>All content on this site — including articles, illustrations, photographs, and design — is the intellectual property of Xyris Nature Script and its contributors, unless otherwise noted.</p>
+    <ul>
+      <li><strong>Personal use:</strong> You may read, print, and share individual articles for non-commercial, personal purposes, provided you credit Xyris Nature Script.</li>
+      <li><strong>Commercial use:</strong> Reproduction, republication, or distribution of our content for commercial purposes requires prior written permission.</li>
+      <li><strong>User contributions:</strong> By submitting comments, questions, or other content, you grant us a non-exclusive, royalty-free license to use, reproduce, and publish that content in connection with the Site.</li>
+    </ul>
+  </div>
+
+  <div class="terms-section">
+    <h2>3. User conduct</h2>
+    <p>We believe in kindness, curiosity, and constructive dialogue. By using the Site, you agree to:</p>
+    <ul>
+      <li>Respect all community members, contributors, and commenters.</li>
+      <li>Refrain from posting spam, harmful links, or offensive material.</li>
+      <li>Not use the Site to promote products or services without permission.</li>
+      <li>Not attempt to disrupt the Site or compromise its security.</li>
+    </ul>
+    <div class="highlight-box">
+      <p style="margin:0; font-weight:500;">🌱 <em>We reserve the right to remove comments or block users who violate these standards.</em></p>
+    </div>
+  </div>
+
+  <div class="terms-section">
+    <h2>4. Accuracy of information</h2>
+    <p>We strive to provide accurate, well-researched information about gardening, ecology, and related topics. However:</p>
+    <ul>
+      <li>Gardening practices vary by region, climate, and soil — we recommend consulting local experts.</li>
+      <li>Our content is for educational and inspirational purposes, not a substitute for professional agricultural or horticultural advice.</li>
+      <li>We are not liable for any outcomes resulting from the application of ideas shared on this site.</li>
+    </ul>
+  </div>
+
+  <div class="terms-section">
+    <h2>5. Links to third-party sites</h2>
+    <p>Our content may include links to external websites (e.g., seed suppliers, research sources, partner organisations). We provide these for convenience and do not endorse or assume responsibility for the content, policies, or practices of any third-party site.</p>
+  </div>
+
+  <div class="terms-section">
+    <h2>6. Disclaimer of warranties</h2>
+    <p>Xyris Nature Script is provided "as is" and "as available." We make no warranties, express or implied, regarding the reliability, accuracy, or availability of the Site. Use of the Site is at your own risk.</p>
+  </div>
+
+  <div class="terms-section">
+    <h2>7. Limitation of liability</h2>
+    <p>To the fullest extent permitted by law, Xyris Nature Script and its contributors shall not be liable for any indirect, incidental, or consequential damages arising from your use of the Site — including but not limited to loss of data, garden yields, or emotional well-being.</p>
+  </div>
+
+  <div class="terms-section">
+    <h2>8. Privacy & data</h2>
+    <p>Your privacy matters to us. Our practices are outlined in our <a href="privacy.html">Privacy Policy</a> and <a href="cookies.html">Cookies Policy</a>, which are incorporated into these terms by reference. We collect minimal data and never sell or share your personal information with third parties.</p>
+  </div>
+
+  <div class="terms-section">
+    <h2>9. Termination</h2>
+    <p>We reserve the right to suspend or terminate access to the Site at our sole discretion, without notice, for conduct that violates these terms or is otherwise harmful to the community.</p>
+  </div>
+
+  <div class="terms-section">
+    <h2>10. Governing law</h2>
+    <p>These terms are governed by the laws of the jurisdiction in which Xyris Nature Script operates, without regard to conflict-of-law principles.</p>
+  </div>
+
+  <div class="terms-section">
+    <h2>11. Contact</h2>
+    <p>If you have questions about these Terms of Service, please reach out through our <a href="contact.html">Contact page</a> or email us at <a href="mailto:hello@xyrisnature.script">hello@xyrisnature.script</a>.</p>
+  </div>
+
+  <!-- quick summary -->
+  <div style="background:#ede8dd; border-radius:40px 8px 40px 8px; padding:1.8rem 2.2rem; margin:2rem 0;">
+    <h3 style="margin-top:0;">📋 In brief</h3>
+    <ul style="list-style:none; padding-left:0;">
+      <li style="padding:0.3rem 0;">✓ All content is protected — please credit us when sharing.</li>
+      <li style="padding:0.3rem 0;">✓ Treat others with kindness and respect.</li>
+      <li style="padding:0.3rem 0;">✓ Use our advice thoughtfully — every garden is unique.</li>
+      <li style="padding:0.3rem 0;">✓ We’re here to learn and grow together.</li>
+    </ul>
+  </div>
+
+  <!-- newsletter -->
+  <div class="newsletter">
+    <h2 style="border-left:none;">🌱 receive the seasonal letter</h2>
+    <p style="max-width:50ch; margin:0 auto 1.4rem;">Weekly insights, rare varieties, and regenerative practices — free of charge.</p>
+    <input type="email" placeholder="your email address" aria-label="email">
+    <button type="button">subscribe</button>
+  </div>
+
+  <!-- footer -->
+  <footer>
+    <span>© Xyris Nature Script · rooted in knowledge</span>
+    <span>🌿 100% reader-supported · no ads</span>
+  </footer>
+
+</div>
+</body>
+</html>

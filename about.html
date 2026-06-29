@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>About · Xyris Nature Script</title>
+  <meta name="description" content="Our roots, our ground — the story behind Xyris Nature Script, a gardening journal for the thoughtful grower.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23355e3b'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* reset & base — same earthy palette as homepage */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f6f2eb;
+      color: #1e2b1f;
+      font-family: 'Figtree', 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.7;
+      padding: 0 1.5rem;
+    }
+
+    .site-wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      background: #fcfaf7;
+      box-shadow: 0 0 40px rgba(0,0,0,0.02);
+      padding: 0 2rem 3rem;
+      border-radius: 0 0 48px 48px;
+    }
+
+    /* typography */
+    h1, h2, h3, h4 {
+      font-family: 'Merriweather', Georgia, serif;
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      color: #1d3a1e;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 2.1rem;
+      margin: 2.2rem 0 1rem;
+      border-left: 6px solid #b8b08b;
+      padding-left: 1.2rem;
+    }
+    h3 {
+      font-size: 1.6rem;
+      margin: 1.8rem 0 0.8rem;
+      color: #2f4d30;
+    }
+    p, li, blockquote {
+      font-size: 1.125rem;
+      color: #232f23;
+      max-width: 75ch;
+    }
+
+    a {
+      color: #3f6b3a;
+      text-decoration: none;
+      border-bottom: 1px dotted #b8b08b;
+      transition: border 0.2s;
+    }
+    a:hover {
+      border-bottom: 2px solid #3f6b3a;
+    }
+
+    /* header / navigation – clean, minimal */
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 0 1.5rem;
+      border-bottom: 2px solid #e5dfd4;
+      margin-bottom: 2rem;
+    }
+    .brand {
+      font-family: 'Merriweather', serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #2d4d2a;
+      background: #ede8dd;
+      padding: 0.1rem 1.2rem 0.2rem;
+      border-radius: 60px;
+      display: inline-block;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    }
+    .brand small {
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: #5b7157;
+      margin-left: 0.3rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      font-weight: 500;
+      font-size: 1.05rem;
+    }
+    .nav-links a {
+      border-bottom: none;
+      color: #2b4028;
+      padding: 0.2rem 0;
+    }
+    .nav-links a:hover {
+      border-bottom: 3px solid #9dad85;
+    }
+    .nav-links li {
+      list-style: none;
+    }
+
+    /* about hero */
+    .about-hero {
+      padding: 1.5rem 0 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+    .about-hero-text {
+      flex: 2 1 55%;
+    }
+    .about-hero-text h1 {
+      font-size: 3.2rem;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+    .about-hero-text .sub {
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: #3a553b;
+      border-left: 6px solid #b8b08b;
+      padding-left: 1rem;
+      margin-bottom: 1.2rem;
+    }
+    .about-hero-text p {
+      font-size: 1.2rem;
+      max-width: 70ch;
+    }
+    .about-image {
+      flex: 1 1 30%;
+      min-width: 180px;
+    }
+    .about-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 40px 8px 40px 8px;
+      filter: saturate(0.9) contrast(1.02);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+      display: block;
+    }
+
+    /* values grid */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0 1.5rem;
+    }
+    .value-card {
+      background: #f9f6ef;
+      border-radius: 32px 12px 32px 12px;
+      padding: 1.8rem 1.5rem 2rem;
+      border: 1px solid #ece6da;
+      transition: 0.2s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+    .value-card:hover {
+      transform: translateY(-4px);
+      border-color: #b8b08b;
+    }
+    .value-card h3 {
+      margin-top: 0.2rem;
+      font-size: 1.4rem;
+    }
+    .value-card p {
+      font-size: 1rem;
+    }
+
+    /* team section */
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.2rem;
+      margin: 2rem 0 1rem;
+    }
+    .team-card {
+      flex: 1 1 200px;
+      background: #f5f1e9;
+      border-radius: 40px 8px 40px 8px;
+      padding: 1.5rem 1.8rem;
+      border: 1px solid #e2dacb;
+      text-align: center;
+    }
+    .team-card .avatar {
+      font-size: 3.6rem;
+      line-height: 1;
+      margin-bottom: 0.2rem;
+    }
+    .team-card h4 {
+      font-size: 1.3rem;
+      margin: 0.3rem 0 0.1rem;
+    }
+    .team-card .role {
+      font-size: 0.9rem;
+      color: #5b7157;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+
+    /* timeline / story */
+    .story-block {
+      background: #ede8dd;
+      border-radius: 48px 12px 48px 12px;
+      padding: 2rem 2.5rem;
+      margin: 2.8rem 0;
+    }
+    .story-block h2 {
+      border-left: none;
+      padding-left: 0;
+      margin-top: 0;
+    }
+    .story-block p {
+      max-width: 70ch;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin-top: 1.5rem;
+    }
+    .timeline-item {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+      border-bottom: 1px solid #d2cbbe;
+      padding-bottom: 0.8rem;
+    }
+    .timeline-year {
+      font-weight: 700;
+      font-family: 'Merriweather', serif;
+      font-size: 1.3rem;
+      color: #1d3a1e;
+      min-width: 80px;
+    }
+    .timeline-desc {
+      flex: 1;
+    }
+
+    /* newsletter / footer identical to homepage */
+    .newsletter {
+      background: #dce5d3;
+      border-radius: 60px 12px 60px 12px;
+      padding: 2.5rem 3rem;
+      margin: 3rem 0;
+      text-align: center;
+    }
+    .newsletter h2 {
+      border-left: none;
+      padding-left: 0;
+      margin-top: 0;
+    }
+    .newsletter input {
+      border: 1px solid #b8b08b;
+      border-radius: 80px;
+      padding: 0.9rem 1.8rem;
+      font-size: 1rem;
+      background: #fcfaf7;
+      width: 280px;
+      max-width: 80%;
+      margin-right: 0.5rem;
+    }
+    .newsletter button {
+      background: #2d4d2a;
+      border: none;
+      color: white;
+      font-weight: 600;
+      padding: 0.9rem 2.2rem;
+      border-radius: 80px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .newsletter button:hover {
+      background: #1b3319;
+    }
+
+    footer {
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 2px solid #e5dfd4;
+      font-size: 0.95rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      color: #4b5f47;
+    }
+
+    @media (max-width: 700px) {
+      .site-wrap { padding: 0 1rem 2rem; }
+      .header { flex-direction: column; align-items: start; gap: 0.8rem; }
+      .nav-links { gap: 1.2rem; flex-wrap: wrap; }
+      .about-hero { flex-direction: column; }
+      .about-image { margin-left: 0; margin-top: 1rem; width: 100%; }
+      .about-hero-text h1 { font-size: 2.4rem; }
+      .values-grid { grid-template-columns: 1fr; }
+      .team-grid { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+<div class="site-wrap">
+
+  <!-- header (same as homepage) -->
+  <header class="header">
+    <div class="brand">Xyris<span style="font-weight:300;">·</span>Nature <small>script</small></div>
+    <div class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" style="border-bottom:3px solid #9dad85;">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="terms.html">Terms Of Privacy</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="cookies.html">Cookies Policy</a></li>
+    </div>
+  </header>
+
+  <!-- about hero -->
+  <section class="about-hero">
+    <div class="about-hero-text">
+      <h1>Our roots,<br>our ground</h1>
+      <div class="sub">A living journal, cultivated with intention</div>
+      <p>Xyris Nature Script began as a quiet notebook — a place to record the subtle shifts of soil, the patience of seeds, and the wisdom of older growers. Today, it is a gathering space for those who believe that gardening is not a hobby but a relationship: with land, with climate, with community.</p>
+      <p style="margin-top:0.8rem;">We are gardeners, ecologists, and storytellers. We write to learn, and we learn by listening to the earth.</p>
+    </div>
+    <div class="about-image">
+      <!-- about image: abstract landscape with warmth -->
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23d3d9c9'/%3E%3Cpath d='M60 220 L130 140 L200 180 L280 90 L350 150 L390 190 L370 260 L60 260Z' fill='%2394a885' opacity='0.5'/%3E%3Ccircle cx='220' cy='150' r='50' fill='%23738a6b' opacity='0.4'/%3E%3C/svg%3E"
+           alt="landscape abstraction — layered fields and light" style="background:#d3d9c9;">
+    </div>
+  </section>
+
+  <!-- values / philosophy -->
+  <h2>🌱 Our guiding principles</h2>
+  <div class="values-grid">
+    <div class="value-card">
+      <h3>🌿 Soil first</h3>
+      <p>We believe healthy soil is the foundation of all abundance. Our content prioritises regenerative practices that build organic matter, biodiversity, and resilience.</p>
+    </div>
+    <div class="value-card">
+      <h3>🧬 Heritage & adaptation</h3>
+      <p>Heirloom varieties and landraces carry genetic memory. We celebrate their flavours, stories, and adaptability — and we encourage seed saving for the future.</p>
+    </div>
+    <div class="value-card">
+      <h3>🌍 Climate consciousness</h3>
+      <p>Gardening in a changing climate demands observation and flexibility. We share strategies for water management, heat resilience, and carbon-sequestering practices.</p>
+    </div>
+    <div class="value-card">
+      <h3>📖 Slow knowledge</h3>
+      <p>We favour depth over speed. Our articles are researched, lived, and revisited — because the land teaches us in seasons, not seconds.</p>
+    </div>
+  </div>
+
+  <!-- story + timeline -->
+  <div class="story-block">
+    <h2>📜 The story so far</h2>
+    <p>Xyris Nature Script was founded in 2018, born from a small community garden in the foothills. What started as a shared logbook among neighbours has grown into a global readership — yet our ethos remains the same: write with care, grow with patience, and always leave the land better than you found it.</p>
+    <div class="timeline">
+      <div class="timeline-item"><span class="timeline-year">2018</span><span class="timeline-desc">First seed exchange & garden diary — the seed of Xyris.</span></div>
+      <div class="timeline-item"><span class="timeline-year">2020</span><span class="timeline-desc">Launched as a public blog; focus on no-dig and carbon farming.</span></div>
+      <div class="timeline-item"><span class="timeline-year">2022</span><span class="timeline-desc">Collaboration with seed savers and permaculture designers worldwide.</span></div>
+      <div class="timeline-item"><span class="timeline-year">2025</span><span class="timeline-desc">Expanded into in-depth tutorials, resources, and a seasonal newsletter.</span></div>
+    </div>
+  </div>
+
+  <!-- team / contributors -->
+  <h2>🌾 The keepers</h2>
+  <div class="team-grid">
+    <div class="team-card"><div class="avatar">🌿</div><h4>Elena Voss</h4><div class="role">Editor & soil ecologist</div><p style="font-size:0.9rem; margin-top:0.3rem;">15 years in regenerative agriculture, compost whisperer.</p></div>
+    <div class="team-card"><div class="avatar">🌱</div><h4>Marcel Dubois</h4><div class="role">Seed curator & writer</div><p style="font-size:0.9rem; margin-top:0.3rem;">Heirloom enthusiast, travels to collect rare landraces.</p></div>
+    <div class="team-card"><div class="avatar">🌳</div><h4>Priya Sharma</h4><div class="role">Design & permaculture</div><p style="font-size:0.9rem; margin-top:0.3rem;">Forest gardener, polyculture systems designer.</p></div>
+    <div class="team-card"><div class="avatar">📘</div><h4>Jonas Berg</h4><div class="role">Community & outreach</div><p style="font-size:0.9rem; margin-top:0.3rem;">Connects growers, hosts workshops and seed swaps.</p></div>
+  </div>
+
+  <!-- what we offer (additional context) -->
+  <div style="display:flex; flex-wrap:wrap; gap:2rem; margin:2.5rem 0;">
+    <div style="flex:1; min-width:200px; background:#f5f1e9; padding:1.8rem 2rem; border-radius:40px 8px 40px 8px;">
+      <h3 style="margin-top:0;">📚 What you'll find here</h3>
+      <ul style="list-style:none; padding-left:0;">
+        <li style="padding:0.4rem 0;">• Deep-dive soil science & microbiology</li>
+        <li style="padding:0.4rem 0;">• Heirloom seed profiles & saving guides</li>
+        <li style="padding:0.4rem 0;">• Permaculture designs for any scale</li>
+        <li style="padding:0.4rem 0;">• Seasonal rhythm & climate adaptation</li>
+        <li style="padding:0.4rem 0;">• Community stories and grower wisdom</li>
+      </ul>
+    </div>
+    <div style="flex:1; min-width:200px; background:#ede8dd; padding:1.8rem 2rem; border-radius:40px 8px 40px 8px;">
+      <h3 style="margin-top:0;">🌐 Join the conversation</h3>
+      <p style="font-size:1rem;">We host monthly virtual gatherings, seed exchanges, and a reader-driven Q&A. Follow our seasonal letter for events and new articles.</p>
+      <p style="font-size:1rem; margin-top:0.8rem;">📬 <a href="#" style="border-bottom:none;">Subscribe to the newsletter</a> — no spam, just root wisdom.</p>
+    </div>
+  </div>
+
+  <!-- newsletter (consistent) -->
+  <div class="newsletter">
+    <h2 style="border-left:none;">🌱 receive the seasonal letter</h2>
+    <p style="max-width:50ch; margin:0 auto 1.4rem;">Weekly insights, rare varieties, and regenerative practices — free of charge.</p>
+    <input type="email" placeholder="your email address" aria-label="email">
+    <button type="button">subscribe</button>
+  </div>
+
+  <!-- footer -->
+  <footer>
+    <span>© Xyris Nature Script · rooted in knowledge</span>
+    <span>🌿 100% reader-supported · no ads</span>
+  </footer>
+
+</div> <!-- site-wrap -->
+</body>
+</html>
